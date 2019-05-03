@@ -1,0 +1,30 @@
+{
+  "name": "lr-blog",
+  "version": "1.0.0",
+  "description": "The official blog of the Legal Repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "eleventy --serve --watch",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LegalRepository/lr-blog"
+  },
+  "keywords": [
+    "blog",
+    "law",
+    "open",
+    "access",
+    "technology",
+    "knowledge",
+    "literature",
+    "information"
+  ],
+  "author": "Srivats Shankar",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.2"
+  }
+}
