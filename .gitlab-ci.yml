@@ -1,0 +1,12 @@
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    - echo "success"
+  artifacts:
+    paths:
+    - public/
+  only:
+  - master

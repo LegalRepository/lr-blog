@@ -3,7 +3,7 @@
   "title": "The Legal Repository Blog",
   "tagline": "The official blog for the Legal Repository. Focusing on everything law, literature and open access.",
   "url": "https://legalrepository.org",
-  "css": "/css/style.css",
+  "css": "/css/style.min.css",
   "web_logo": "/logo/web_logo.png",
   "logo_text": "/logo/logo_text.png",
   "logo": "/logo/logo.png",

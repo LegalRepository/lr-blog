@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx eleventy",
-    "build": "npx eleventy --serve --watch"
+    "build": "npx eleventy --serve --watch",
+    "css": "node css.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,10 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.2"
+  },
+  "dependencies": {
+    "@node-minify/clean-css": "^4.0.5",
+    "@node-minify/core": "^4.0.5",
+    "clean-css": "^4.2.1"
   }
 }
