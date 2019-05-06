@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "eleventy --serve --watch",
-    "build": "eleventy"
+    "start": "npx eleventy",
+    "build": "npx eleventy --serve --watch"
   },
   "repository": {
     "type": "git",

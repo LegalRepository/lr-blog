@@ -1,0 +1,47 @@
+{% include html.liquid %}
+    <title>{{ title }}</title>
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BlogPosting",
+     "headline": "{{ title }}",
+     "image": "{{ image }}",
+     "editor": "{{ site.sitename }}",
+     "genre": "{{ genre }}",
+     "keywords": "{% for item in keywords %}{{ item }} {% endfor %}",
+     "publisher": {
+        "@type": "Organization",
+        "logo": "{{ image }}",
+        "name": "{{ site.sitename }}"
+       },
+     "url": "{{ page.url }}",
+     "datePublished": "{{ page.date }}",
+     "dateCreated": "{{ page.date }}",
+     "dateModified": "{{ page.date }}",
+     "description": "{{ description }}",
+     "articleBody": "{{ content | strip_html }}",
+     "author": {
+      "@type": "Person",
+      "name": "{{ author }}"
+      },
+      "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "{{ page.url }}"
+      }
+     }
+    </script>
+  {% include head.liquid %}
+
+  <div class="add">
+    <h1>{{ title }}</h1>
+    <br/>
+    <p class="author"><i>by</i> {{ author }}</p> | <p class="date">{{ page.date | date:'%B %d, %Y' }}</p>
+    {{ content | safe }}
+    <p>
+    {% for item in keywords %}
+      <span class="tag">{{ item }}</span>
+    {% endfor %}
+    </p>
+  </div>
+
+{% include tail.liquid %}

@@ -1,0 +1,4 @@
+{
+  "permalink": "pages/{{ title | slug }}/index.html",
+  "layout": "page"
+}

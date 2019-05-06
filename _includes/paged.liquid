@@ -1,0 +1,50 @@
+{% if pagination.pageLinks.length == 2 %}
+
+{% if pagination.previousPageLink %}
+    <a class="page" href="{{ pagination.previousPageHref }}">Newer Articles</a>
+{% endif %}
+
+{% if pagination.nextPageLink %}
+    <a class="page" href="{{ pagination.nextPageHref }}">Older Articles</a>
+{% endif %}
+
+{% elsif pagination.pageLinks.length > 2  %}
+
+  {% assign pagenum = pagination.pageNumber %}
+  {% assign pageend = pagination.pageLinks.length | minus:pagenum %}
+  {% assign pagecon = pagenum | minus:0 %}
+  {% assign first = pagenum | minus:4 %}
+  {% assign var = 0 %}
+  {% assign varend = pagination.pageLinks.length | minus:1 %}
+
+  {% if pagination.pageLinks.length > 9 %}
+    {% if pageend <= 5 %}
+      {% assign var = 9 | minus:pageend %}
+      {% assign first = pagenum | minus:var %}
+    {% endif %}
+    {% if pagecon <= 5 %}
+      {% assign first = 0 %}
+    {% endif %}
+    {% assign varend = 8 %}
+  {% else %}
+    {% assign first = 0 %}
+  {% endif %}
+
+  {% if pagination.previousPageLink %}
+      <a class="page" href="{{ pagination.previousPageHref }}">Previous</a>
+  {% endif %}
+
+  {% for i in (0..varend) %}
+    {% assign var = i | plus:first %}
+    {% if pagecon == var %}
+      <span class="page">{{ var | plus:1 }}</span>
+    {% else %}
+      <a class="page" href="{{ pagination.pageLinks[var] }}">{{ var | plus:1 }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if pagination.nextPageLink %}
+      <a class="page" href="{{ pagination.nextPageHref }}">Next</a>
+  {% endif %}
+
+{% endif %}

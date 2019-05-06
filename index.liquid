@@ -1,0 +1,45 @@
+---
+pagination:
+  data: collections.posts
+  size: 20
+  alias: posts
+---
+
+{% include html.liquid %}
+    <title>{{ site.title }}</title>
+    <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "WebPage",
+          "name": "{{ site.title }}",
+          "description": "{{ site.tagline }}",
+          "publisher": {
+            "@type": "Organization",
+            "name": "{{ site.sitename }}",
+            "url": "{{ site.url }}",
+            "logo": "{{ site.web_logo }}",
+            "foundingDate": "2016",
+             "founders": [
+                {
+                 "@type": "Person",
+                 "name": "Srivats Shankar"
+                }
+            ],
+            "sameAs": [
+             "https://twitter.com/LegalRepository",
+             "https://github.com/LegalRepository"
+            ]
+          }
+      }
+    </script>
+    {% include head.liquid %}
+
+        {% for post in pagination.items %}
+          <div class="article">
+            <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+            <p>{{ post.data.description }}</p>
+          </div>
+        {% endfor %}
+
+    <div class="block">{% include paged.liquid %}</div>
+{% include tail.liquid %}

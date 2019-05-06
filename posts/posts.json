@@ -1,0 +1,6 @@
+{
+  "permalink": "posts/{{ page.date | date: '%Y/%m' }}/{{ title | slug }}/index.html",
+  "layout": "post",
+  "date": "Created",
+  "image": "/logo/web_logo.png"
+}
