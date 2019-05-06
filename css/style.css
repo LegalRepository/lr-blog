@@ -84,6 +84,7 @@ a:hover {
   .col {
     width: 968px;
     padding: 1em;
+    padding-bottom: 60px;
     height: auto;
   }
   footer span, footer span.right {
