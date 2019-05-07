@@ -8,5 +8,7 @@
   "logo_text": "/logo/logo_text.png",
   "logo": "/logo/logo.png",
   "blog_logo": "/logo/b_logo.png",
-  "text": "/logo/text.png"
+  "text": "/logo/text.png",
+  "changefreq": "weekly",
+  "priority": "0.9"
 }

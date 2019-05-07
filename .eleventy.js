@@ -6,6 +6,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("pages", function(collection) {
     return collection.getFilteredByGlob("pages/**/*.md");
   });
+  eleventyConfig.addCollection("misc", function(collection) {
+    return collection.getFilteredByGlob("misc/**");
+  });
 
   // Build files that need to be linked
   eleventyConfig.addPassthroughCopy("img");
