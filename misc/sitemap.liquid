@@ -9,8 +9,8 @@ ignore: true
   <url>
     <loc>https://legalrepository.org{{ item.url }}</loc>
     <lastmod>{{ item.date | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>{{ item.data.changefreq }}</changefreq>
-    <priority>{{ item.data.priority }}</priority>
+    <changefreq>{{ site.changefreq }}</changefreq>
+    <priority>{{ site.priority }}</priority>
   </url>
 {%- endunless %}
 {%- endfor %}
