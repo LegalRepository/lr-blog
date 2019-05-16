@@ -7,7 +7,7 @@ ignore: true
 {%- for item in collections.all %}
 {%- unless item.data.ignore == true %}
   <url>
-    <loc>https://legalrepository.org{{ item.url }}</loc>
+    <loc>https://blog.legalrepository.org{{ item.url }}</loc>
     <lastmod>{{ item.date | date: '%Y-%m-%d' }}</lastmod>
     <changefreq>{{ site.changefreq }}</changefreq>
     <priority>{{ site.priority }}</priority>
