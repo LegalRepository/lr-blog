@@ -15,6 +15,7 @@ The name of the file should follow this lexical pattern:
 `file number hierarchically` + `short name for the file`
 
 Remember to include the following information at the top:
+```yaml
 ---
 title: 
 description: 
@@ -24,6 +25,7 @@ keywords:
 author: 
 image: /img/[file].jpg
 ---
+```
 
 ### Page
 
@@ -34,10 +36,12 @@ The name of the file should follow this lexical pattern:
 `page name`
 
 Remember to include the following information at the top:
+```yaml
 ---
 title: 
 description: 
 ---
+```
 
 ## Technical
 
