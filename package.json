@@ -26,7 +26,7 @@
   "author": "Srivats Shankar",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.8.2"
+    "@11ty/eleventy": "^1.0.2"
   },
   "dependencies": {
     "@node-minify/clean-css": "^4.0.5",
